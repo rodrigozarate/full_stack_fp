@@ -48,17 +48,25 @@
                   </div>
                   <form class="user" method="post" action="sistema.php?panel=inicio">
                     <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="usuario" name="seudonimo_usuario"  placeholder="Usuario">
+                      <input type="text" class="form-control form-control-user" id="usuario" name="seudonimo_usuario"  placeholder="<?php echo $q_usuario_lang; ?>">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="clave" name="clave_usuario" placeholder="Clave">
+                      <input type="password" class="form-control form-control-user" id="clave" name="clave_usuario" placeholder="<?php echo $q_clave_lang; ?>">
                     </div>
-                    <input name="Ingreso" type="submit"  class="btn btn-primary btn-user btn-block" id="Ingreso" value="Ingreso">
+                    <input name="Ingreso" type="submit"  class="btn btn-primary btn-user btn-block" id="Ingreso" value="<?php echo $q_ingreso_lang; ?>">
                     
                   </form>
                   <hr>
                   <div class="text-center">
-                    <a class="small" href="recuperar-clave.php">Recuperar clave</a>
+                    <a class="small" href="recuperar-clave.php">
+                        <?php echo $q_recuperar_clave; ?>
+                      </a>
+                  </div>
+                  <hr>
+                  <div class="text-center">
+                    <a class="small" href="registrar-nuevo.php">
+                        <?php echo $q_registrarse; ?>
+                      </a>
                   </div>
                 </div>
               </div>
