@@ -1,7 +1,0 @@
-- Crear una cuenta, y asociarse a una compañía previamente creada (se deben crear varias compañías y estar disponibles a modo listado) 
-[x] Loguearse en la plataforma
-- Crear una historia de usuario con su primer ticket (cada historia de usuario debe tener al menos un ticket)
-- Levantar un ticket o solicitud de desarrollo completamente nuevo (debe estar relacionado a una historia de usuario)
-- Editar un ticket o solicitud de desarrollo que esté vinculado a una historia de usuario
-- Poder ver un historial de tickets y su estado
-- Cancelar un ticket activo
