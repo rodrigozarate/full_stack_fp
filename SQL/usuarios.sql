@@ -2,8 +2,6 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Servidor: custsql-ipw14.eigbox.net
--- Tiempo de generación: 22-10-2021 a las 13:32:46
 -- Versión del servidor: 5.6.50-90.0-log
 -- Versión de PHP: 7.0.33-0ubuntu0.16.04.14
 
@@ -58,3 +56,10 @@ ALTER TABLE `usuarios`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `registro_usuario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
