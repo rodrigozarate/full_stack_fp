@@ -56,12 +56,7 @@
                     <input name="Ingreso" type="submit"  class="btn btn-primary btn-user btn-block" id="Ingreso" value="<?php echo $q_ingreso_lang; ?>">
                     
                   </form>
-                  <hr>
-                  <div class="text-center">
-                    <a class="small" href="recuperar-clave.php">
-                        <?php echo $q_recuperar_clave; ?>
-                      </a>
-                  </div>
+                  
                   <hr>
                   <div class="text-center">
                     <a class="small" href="registrar-nuevo.php">
