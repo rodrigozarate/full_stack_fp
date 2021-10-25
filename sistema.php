@@ -304,8 +304,46 @@ if($_SESSION['valido']=='1'){
 }
 ?>
 
+<?php
+if($_SESSION['valido']=='1'){
+	if($_SESSION['tipo_usuario']>='0'){
+		if(isset($_POST['nuevo']) && $_POST['nuevo']=='ticket_4'){	
+		// rutina de guardado de datos
+		$insertar = new consultaTicket;
+		$respuesta = $insertar->crearTicket($_POST['nombre_ticket'],$_POST['comentarios_ticket'],$_POST['estado_ticket'],$_POST['id_historia_ticket'],$conexion);
+		//va a index panel proyecto
+		?>
+	<script>
+	<!--
+    irAlInicioTicket();
+	-->
+    </script>
+	<?php
+		 }
+	}	
+}
+?>
 
 
+<?php
+if($_SESSION['valido']=='1'){
+	if($_SESSION['tipo_usuario']>='0'){
+		if(isset($_POST['edicion']) && $_POST['edicion']=='ticket_3'){	
+		// rutina de guardado de datos
+		$insertar = new consultaTicket;
+		$respuesta = $insertar->editarTicket($_POST['nombre_ticket'],$_POST['comentarios_ticket'],$_POST['estado_ticket'],$_POST['id_historia_ticket'],$_POST['registro'],$conexion);
+		//va a index panel proyecto
+		?>
+	<script>
+	<!--
+    irAlInicioTicket();
+	-->
+    </script>
+	<?php
+		 }
+	}	
+}
+?>
 
 
 

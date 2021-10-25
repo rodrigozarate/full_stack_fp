@@ -16,33 +16,8 @@ class consultaTicket {
     
     
     	function listarTicketsC($q_company,$conexion) {
-            
-           
-        $stmt0 = $conexion->prepare("SELECT id_proyecto FROM proyectos WHERE id_company_proyecto = '".$q_company."' ");
-		$stmt0->execute();
-		$stmt0->bind_result($id_proyecto);
-		$datosProyectos = array();
-		while($stmt0->fetch()){
-		$datosProyectos[] = $id_proyecto;
-			}
-            
-		/* return $datosProyectos; */
-            
 
-		$stmt0->close();
-            
-            foreach($datosProyectos as $value){
-                $condicion += " id_proyecto_ticket = '".$value."' OR ";
-            }
-            $condicion += " id_proyecto_ticket = '".$value."'";
-            
-
-            
-           // $condicion = 1;
-         echo " -- ".$condicion." -- "; 
-          /* limit to projects of self company */  
-
-		$stmt = $conexion->prepare("SELECT id_ticket, nombre_ticket, comentarios_ticket, estado_ticket, id_proyecto_ticket, fecha_ticket FROM tickets WHERE ".$condicion."  ");
+		$stmt = $conexion->prepare("SELECT id_ticket, nombre_ticket, comentarios_ticket, estado_ticket, id_historia_ticket, fecha_ticket FROM tickets WHERE id_historia_ticket IN (SELECT id_historia FROM historias WHERE id_proyecto_historia IN (SELECT id_proyecto FROM proyectos WHERE id_company_proyecto = '".$q_company."'))  ");
 		$stmt->execute();
 		$stmt->bind_result($id_ticket, $nombre_ticket, $comentarios_ticket, $estado_ticket, $id_proyecto_ticket, $fecha_ticket);
 		$datosTickets = array();

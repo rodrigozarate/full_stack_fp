@@ -26,7 +26,7 @@ foreach ($listaHistorias as $clave => $valor) {
 		// escribe un dato como link 
 		if($_SESSION['tipo_usuario']==5){
 			if($llave==0){
-				echo "<td><a data-toggle=\"modal\" data-target=\"#modalEditar\" data-idusuario=\"".$dato."\" data-ubicacion=\"frm_historia.php?dt\" data-titulo=\"Editar Historia\" href=\"#\">Editar ".$dato."</a></td>";
+				echo "<td>".$dato."</td>";
 				}
 		}
 					

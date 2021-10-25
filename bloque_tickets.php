@@ -13,7 +13,7 @@ $listaTickets = $pregunta->listarTickets($conexion);
 
 echo "<table id=\"Tinformacion\" class=\"table-sm table-bordered table-hover dataTable\">";
 echo "<thead>";
-if($_SESSION['tipo_usuario']==5){
+if($_SESSION['tipo_usuario']>=0){
 echo "<tr class=\"thead-light\"><th>ID</th><th>Nombre Ticket</th><th>Comentarios</th><th>Estado</th><th>Historia</th><th>Fecha de inicio</th></tr>";	
 	}else{
 	echo "<tr><th>Nombre Ticket</th><th>Comentarios</th><th>Estado</th><th>Historia</th><th>Fecha de inicio</th></tr>";	
@@ -28,7 +28,7 @@ foreach ($listaTickets as $clave => $valor) {
 	echo "<tr>";
 	foreach($valor as $llave => $dato){
 		// escribe un dato como link 
-		if($_SESSION['tipo_usuario']==5){
+		if($_SESSION['tipo_usuario']>=0){
 			if($llave==0){
 				echo "<td><a data-toggle=\"modal\" data-target=\"#modalEditar\" data-idusuario=\"".$dato."\" data-ubicacion=\"frm_ticket.php?dt\" data-titulo=\"Editar Ticket\" href=\"#\">Editar ".$dato."</a></td>";
 				}
