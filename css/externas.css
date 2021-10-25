@@ -26,3 +26,14 @@ letter-spacing: .05rem;
     text-decoration:none !important;
     color: #fff;
 }
+.caseopen{
+        color: #f00 !important;
+    font-weight: bold;
+}
+.casedev{
+        color: #4f4 !important;
+}
+.caseclosed{
+    color: #ccc !important;
+    font-weight:lighter;
+}
