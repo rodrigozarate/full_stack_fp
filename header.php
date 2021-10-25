@@ -14,6 +14,7 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/externas.css" rel="stylesheet">
   
   <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
  
