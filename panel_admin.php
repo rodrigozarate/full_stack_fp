@@ -30,7 +30,7 @@ echo "<a data-toggle=\"modal\" data-target=\"#modalNuevo\" data-titulo=\"Nuevo P
 }?>         
 
 <?php    if($_GET['panel']=='historia'){
-echo "<a data-toggle=\"modal\" data-target=\"#modalNuevo\" data-titulo=\"Nueva Historia\" class=\"btn btn-success btn-icon-split\" data-ubicacion=\"frm_nueva_historia.php\" href=\"#\"><span class=\"icon \"><i class=\"fas fa-plus-square\"></i></span><span class=\"text\">Historia</span></a>";
+echo "<a data-toggle=\"modal\" data-target=\"#modalNuevo\" data-titulo=\"Nueva Historia\" class=\"btn btn-success btn-icon-split\" data-ubicacion=\"frm_nuevo_historia.php\" href=\"#\"><span class=\"icon \"><i class=\"fas fa-plus-square\"></i></span><span class=\"text\">Historia</span></a>";
     }?>
 
 <?php if($_GET['panel']=='ticket'){
@@ -79,7 +79,7 @@ echo "<a data-toggle=\"modal\" data-target=\"#modalNuevo\"  data-titulo=\"Nuevo 
             case "proyecto":
                 include('bloque_proyectos.php');
                 break;
-			case "tickets":
+			case "ticket":
                 include('bloque_tickets.php');
                 break;
 		

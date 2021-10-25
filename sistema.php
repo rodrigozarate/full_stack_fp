@@ -282,3 +282,31 @@ if($_SESSION['valido']=='1'){
 	}	
 }
 ?>
+
+
+<?php
+if($_SESSION['valido']=='1'){
+	if($_SESSION['tipo_usuario']>='0'){
+		if(isset($_POST['nuevo']) && $_POST['nuevo']=='historia_4'){	
+		// rutina de guardado de datos
+		$insertar = new consultaHistoria;
+		$respuesta = $insertar->crearHistoria($_POST['nombre_historia'],$_POST['id_proyecto_historia'],$_POST['nombre_ticket'],$_POST['comentarios_ticket'],$conexion);
+		//va a index panel proyecto
+		?>
+	<script>
+	<!--
+    irAlInicioHistoria();
+	-->
+    </script>
+	<?php
+		 }
+	}	
+}
+?>
+
+
+
+
+
+
+
